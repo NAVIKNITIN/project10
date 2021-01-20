@@ -19,3 +19,16 @@ export const fetchnote=(data)=>{
 };
 
 
+export const updatenote = (id,data) =>{
+    return (dispatch)=>{
+        database.child(id).update(data);
+    }
+}; 
+
+export const deletenote = (id) =>{
+    return (dispatch)=>{
+        database.child(id).remove();
+    }
+};
+
+

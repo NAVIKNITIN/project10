@@ -1,5 +1,7 @@
 import firebase from "firebase/app";
 import 'firebase/database';
+import "firebase/auth";
+
 const firebaseConfig = {
     apiKey: "AIzaSyAJm2q1TvUFXSUCzrZOMjn410V51XzjfN4",
     authDomain: "project10-d144e.firebaseapp.com",
@@ -15,4 +17,6 @@ firebase.initializeApp(firebaseConfig);
 
 export const database=firebase.database().ref("/notes");
 
+
+export const googleprovider= new firebase.auth.GoogleAuthProvider();
 
